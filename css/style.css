@@ -1,75 +1,77 @@
-*{
+* {
     box-sizing: border-box;
-} 
-
-div {
-    width: 600px;
-    height: 300px;
-}
-
-
-.animacja {
+  }
+  
+  .animacja {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 200px;
     position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.czarny {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-name: proba; /*w animation-name musimy podać tą samą nazwę która jest w @keyframes czyli "resize"*/
+    animation-duration: 1s; /*czas trwania naszej animacji, musimy go podać*/
+    visibility: hidden;
+  }
+  
+  .czarny {
     background-color: black;
     position: relative;
-}
-
-.love {
+    width: 600px;
+    height: 300px;
+  }
+  
+  .love {
     font-size: 100px;
-}
-
-@keyframes proba {
-   /* 0% {
-        none;
-    }
-    
-    100% {
-        visibility: hidden;
-    }*/
-
+  }
+  
+  @keyframes proba {
     0% {
-        transform: none;
+      visibility: visible;
     }
-
-    50% {
-        visibility: hidden;
-    }
-
+  
     100% {
-        transform: none;
+      visibility: hidden;
     }
-    }
-
-
-
-.animacja {
-    animation-name: proba; /*w animation-name musimy podać tą samą nazwę która jest w @keyframes czyli "resize"*/
-    animation-duration: 3s; /*czas trwania naszej animacji, musimy go podać*/
-    animation-timing-function: linear; /*czas między jedną i drugą klatką są stałe*/
-    animation-iteration-count: infinite; /*tu podajemy ile razy nasza animacja ma się wykonać,
-                                    jeżeli zamiast 2 wstawimy infinite będzie się zapętlać w nieskonczoność*/
-}
-
-/*.dziesiec {
+  }
+  
+  .dziewiec {
     animation-delay: 1s;
-    animation-play-state: paused;
-}
-
-.dziewiec {
+  }
+  
+  .osiem {
     animation-delay: 2s;
-    
-}
-
-.osiem {
+  }
+  
+  .siedem {
     animation-delay: 3s;
-}*/
+  }
+  
+  .szesc {
+    animation-delay: 4s;
+  }
+  
+  .piec {
+    animation-delay: 5s;
+  }
+  
+  .cztery {
+    animation-delay: 6s;
+  }
+  
+  .trzy {
+    animation-delay: 7s;
+  }
+  
+  .dwa {
+    animation-delay: 8s;
+  }
+  
+  .jeden {
+    animation-delay: 9s;
+  }
+
+  .css {
+    animation-delay: 10s;
+  }

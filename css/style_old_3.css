@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+} 
+
+div {
+    width: 600px;
+    height: 300px;
+}
+
+
+.animacja {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.czarny {
+    background-color: black;
+    position: relative;
+}
+
+.love {
+    font-size: 100px;
+}
+
+@keyframes proba {
+   /* 0% {
+        none;
+    }
+    
+    100% {
+        visibility: hidden;
+    }*/
+
+    0% {
+        transform: none;
+    }
+
+    50% {
+        visibility: hidden;
+    }
+
+    100% {
+        transform: none;
+    }
+    }
+
+
+
+.animacja {
+    animation-name: proba; /*w animation-name musimy podać tą samą nazwę która jest w @keyframes czyli "resize"*/
+    animation-duration: 3s; /*czas trwania naszej animacji, musimy go podać*/
+    animation-timing-function: linear; /*czas między jedną i drugą klatką są stałe*/
+    animation-iteration-count: infinite; /*tu podajemy ile razy nasza animacja ma się wykonać,
+                                    jeżeli zamiast 2 wstawimy infinite będzie się zapętlać w nieskonczoność*/
+}
+
+/*.dziesiec {
+    animation-delay: 1s;
+    animation-play-state: paused;
+}
+
+.dziewiec {
+    animation-delay: 2s;
+    
+}
+
+.osiem {
+    animation-delay: 3s;
+}*/
