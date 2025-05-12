@@ -1,0 +1,45 @@
+/*.czarny {
+    background-color: black;
+    width: 600px;
+    height: 300px;
+    transition: all 5s ease-in;
+}
+
+p {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.czarny:hover {
+    
+}*/
+
+/*poniżej to klatki animacji, mogą być bardziej zagęszczone, możemy dodać 25%, 75% itd
+obecnie mamy same regóły i one nie uruchomią jeszcze animacji*/
+@keyframes resize {
+    0% {
+        transform: scale (1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/*musimy dodać animation. w animation-name musimy podać tą samą nazwę która jest w @keyframes czyli "resize"*/
+
+.nazwa_klasy {
+    animation-name: resize; /*w animation-name musimy podać tą samą nazwę która jest w @keyframes czyli "resize"*/
+    animation-duration: 5s; /*czas trwania naszej animacji, musimy go podać*/
+    animation-timing-function: linear; /*czas między jedną i drugą klatką są stałe*/
+    animation-iteration-count: 2; /*tu podajemy ile razy nasza animacja ma się wykonać,
+                                    jeżeli zamiast 2 wstawimy infinite będzie się zapętlać w nieskonczoność*/
+}
